@@ -1,13 +1,14 @@
-# Entrelinhas 3.0.1 — correção de atualização da interface
+# Entrelinhas 3.0.2 — Correção de largura do desktop
 
-## Por que aparecia a Home antiga?
-A versão 3.0 já estava publicada no GitHub, mas o Service Worker guardava `app.js` e `styles.css` e priorizava as cópias em cache. Assim, o HTML novo podia carregar a interface antiga.
+A Home anterior exibiu uma grade de duas colunas dentro de uma área central estreita, causando sobreposição e palavras empilhadas. Esta atualização introduz regras de contenção explícitas de largura para PC e uma alternativa de coluna única em janelas desktop mais estreitas. **O layout mobile não foi modificado.**
 
-## Como atualizar
-1. Antes, exporte um backup dos manuscritos.
-2. No GitHub, envie TODOS os arquivos desta pasta para a raiz de `sfuria/Entrelinhas-`, mantendo seus nomes: `index.html`, `app-v301.js`, `styles-v301.css`, `sw.js`, `pwa-register.js`, `manifest.json` e os ícones.
-3. Confirme o commit. Após a publicação do GitHub Pages, recarregue a página com Ctrl+Shift+R no PC.
-4. Confira o código-fonte da página: deve conter `3.0.1-cache-corrigido`.
-5. Não limpe os dados do site e não desinstale o PWA.
+## Instalação
+1. Exporte um backup de seus textos atuais.
+2. Na raiz de https://github.com/sfuria/Entrelinhas-/upload/main, envie os arquivos desta pasta (inclusive `styles-v302.css`, `app-v301.js`, `index.html`, `sw.js` e demais arquivos). Preserve nomes e pastas.
+3. Confirme no GitHub, aguarde a publicação e abra https://sfuria.github.io/Entrelinhas-/ usando Ctrl+Shift+R.
+4. **Não limpe dados do site e não desinstale o PWA**.
 
-O código do aplicativo e o esquema dos dados locais não foram modificados nesta correção; apenas a forma de servir a interface. Não é uma atualização de segurança auditada.
+## Validação
+- Arquivos e referências verificados estaticamente.
+- Não foi possível realizar teste visual end-to-end em Chromium neste ambiente (ERR_BLOCKED_BY_ADMINISTRATOR).
+- A mudança não altera o esquema de dados dos manuscritos nem a integração Google.
