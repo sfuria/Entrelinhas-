@@ -1,42 +1,32 @@
-/* Entrelinhas PWA 0.9 — armazena apenas a interface, nunca manuscritos nem tokens do Google. */
-const CACHE = 'entrelinhas-app-shell-v30';
-const ASSETS = ['./', './index.html', './manifest.json', './app.js', './pwa-register.js', './styles.css', './icon-192.png', './icon-512.png'];
-const ROOT = new URL('./', self.location.href);
-const KNOWN = new Set(ASSETS.map(path => new URL(path, ROOT).pathname));
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
+/* Entrelinhas 3.0.1: rede primeiro para arquivos públicos de interface; cache apenas como fallback offline. */
+const CACHE = 'entrelinhas-app-shell-v301';
+const ASSETS = ['./index.html','./manifest.json','./app-v301.js','./pwa-register.js','./styles-v301.css','./icon-192.png','./icon-512.png'];
+const ROOT = new URL('./',self.location.href);
+const KNOWN = new Set(ASSETS.map(p=>new URL(p,ROOT).pathname));
+self.addEventListener('install', event=>{
+ event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });
-self.addEventListener('activate', event => {
-  event.waitUntil((async () => {
-    const keys = await caches.keys();
-    await Promise.all(keys.filter(key => key.startsWith('entrelinhas-app-shell-') && key !== CACHE).map(key => caches.delete(key)));
-    await self.clients.claim();
-  })());
+self.addEventListener('activate',event=>{
+ event.waitUntil((async()=>{
+  const keys=await caches.keys();
+  await Promise.all(keys.filter(k=>k.startsWith('entrelinhas-app-shell-')&&k!==CACHE).map(k=>caches.delete(k)));
+  await self.clients.claim();
+ })());
 });
-self.addEventListener('fetch', event => {
-  const request = event.request;
-  if (request.method !== 'GET') return;
-  const url = new URL(request.url);
-  if (url.origin !== self.location.origin || !KNOWN.has(url.pathname)) return;
-  if (request.mode === 'navigate') {
-    // Use a versão publicada quando houver internet; recorra ao cache se offline.
-    event.respondWith((async () => {
-      try {
-        const response = await fetch(request);
-        if (response.ok) {
-          const cache = await caches.open(CACHE);
-          await cache.put(new URL('./index.html', ROOT).href, response.clone());
-          return response;
-        }
-      } catch (_) { /* sem conexão */ }
-      return await caches.match(new URL('./index.html', ROOT).href)
-        || new Response('Entrelinhas indisponível sem cache. Abra uma vez com internet.', {status:503, headers:{'Content-Type':'text/plain;charset=utf-8'}});
-    })());
-  } else {
-    event.respondWith((async () => {
-      const cached = await caches.match(request, {ignoreSearch:true});
-      if (cached) return cached;
-      return fetch(request);
-    })());
-  }
+self.addEventListener('fetch',event=>{
+ const req=event.request;
+ if(req.method!=='GET')return;
+ const url=new URL(req.url);
+ if(url.origin!==self.location.origin)return;
+ const navigation=req.mode==='navigate'&&url.pathname.startsWith(ROOT.pathname);
+ if(!navigation&&!KNOWN.has(url.pathname))return;
+ event.respondWith((async()=>{
+  const shellUrl=navigation?new URL('./index.html',ROOT).href:req.url;
+  try{
+   const response=await fetch(req,{cache:'no-store'});
+   if(response.ok){const c=await caches.open(CACHE);await c.put(shellUrl,response.clone());return response}
+  }catch(_){/* offline */}
+  const cached=await caches.match(shellUrl);
+  return cached||new Response('Entrelinhas offline: conecte-se e abra novamente.',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}});
+ })());
 });
