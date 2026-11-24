@@ -1,6 +1,6 @@
 /* Entrelinhas 3.0.2: rede primeiro para arquivos públicos de interface; cache apenas como fallback offline. */
-const CACHE = 'entrelinhas-app-shell-v302';
-const ASSETS = ['./index.html','./manifest.json','./app-v302.js','./pwa-register.js','./styles-v302.css','./icon-192.png','./icon-512.png'];
+const CACHE = 'entrelinhas-app-shell-v303';
+const ASSETS = ['./index.html','./manifest.json','./app-v301.js','./pwa-register.js','./styles-v303.css','./icon-192.png','./icon-512.png'];
 const ROOT = new URL('./',self.location.href);
 const KNOWN = new Set(ASSETS.map(p=>new URL(p,ROOT).pathname));
 self.addEventListener('install', event=>{
