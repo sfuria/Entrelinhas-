@@ -1,14 +1,17 @@
-# Entrelinhas 2.9 — Parágrafos e navegação
+# Entrelinhas 3.0 — Primeira etapa de redesign
 
-Correções: recuo inicial padrão de 12,5 mm em documentos sem ajuste explícito; estilo de parágrafo em DIV e P; navegação por Backspace APENAS fora de campos editáveis; links «Nova aba» para documentos e páginas do Diário.
+## O que mudou
+- A Home desktop (>=1100px) passa a ocupar a largura disponível e separa conteúdo principal, documentos recentes, projetos e painel direito com metas/ofensiva.
+- A Home mobile e a navegação mobile são mantidas como na versão 2.9.
+- Temas Lavanda, Papel antigo (sépia) e Noturno foram preservados.
+- Dez temas adicionais: Gótica, Floral, Pastel, Romance escuro, Bosque, Creme clássico, Cereja, Lua e prata, Vermelho e Azul-marinho.
+- Todos são selecionáveis em Ajustes → Aparência; afetam fundo, cartões, texto, bordas e destaque.
 
-## Importante
-- Backspace dentro da área de escrita APAGA texto normalmente. Não deve navegar para trás durante digitação.
-- Alt+Seta esquerda ou botão Voltar são os métodos usuais do navegador para voltar. Backspace fora da digitação é um atalho adicional no Entrelinhas.
-- Cada aba abre uma nova instância da biblioteca local do mesmo domínio. Em computadores diferentes, os documentos locais não aparecem automaticamente.
-- Recuo personalizado em documentos existentes é preservado, inclusive zero.
-- Primeiro exporte backup e teste com dados fictícios. Não limpe armazenamento nem desinstale o aplicativo.
-- O editor local segue baseado em contenteditable; não é equivalente ao Word/Docs. Recomendamos usar Google Docs para diagramação profissional quando autorizado.
+## Limites
+- Primeira etapa visual: ainda não reformula todas as telas de Diário/Projetos para um layout editorial.
+- A integração Google e a Biblioteca Privada continuam experimentais; nenhum login real foi testado neste pacote.
+- O armazenamento continua separado por dispositivo; não foi adicionada sincronização automática.
+- Faça backup antes de substituir arquivos da versão atual. Não desinstale o PWA e não limpe dados do navegador.
 
-## Publicação
-Envie todos os arquivos do pacote, incluindo as subpastas, ao repositório GitHub Pages. Não instale como APK.
+## Instalação
+Carregue o conteúdo do ZIP preservando a estrutura de pastas no GitHub Pages do Entrelinhas. Envie index.html, app.js, styles.css, sw.js, pwa-register.js, manifest.json, imagens e scripts conforme as pastas existentes.

@@ -321,3 +321,38 @@ body{font:17px/1.7 Georgia,serif;max-width:780px;margin:5vh auto;padding:0 25px}
 }
 
 .el29-top-link{min-width:32px;height:34px;padding:4px 7px;font-size:17px}
+
+/* Entrelinhas 3.0 — themes added without changing the three original palettes. */
+body[data-theme='gotico']{--bg:#17121B;--card:#2A202E;--ink:#F1E8F1;--muted:#B8A7BA;--accent:#B987B7;--soft:#3F2E41;--border:#554256;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='floral']{--bg:#FFF9F6;--card:#FFFFFF;--ink:#543D48;--muted:#84717A;--accent:#A46B8C;--soft:#F5E3E9;--border:#E9CFD8;--good:#4D896B;--shadow:none;--danger:#D46C79}
+body[data-theme='pastel']{--bg:#F7F5FF;--card:#FFFFFF;--ink:#3D3858;--muted:#79738B;--accent:#8877CF;--soft:#E9E4FB;--border:#DCD5F1;--good:#4D896B;--shadow:none;--danger:#D46C79}
+body[data-theme='romance']{--bg:#211620;--card:#32212F;--ink:#F8E9F0;--muted:#CAADC2;--accent:#DB8AA0;--soft:#513346;--border:#63475B;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='bosque']{--bg:#1D2923;--card:#293B31;--ink:#F0F5EE;--muted:#BED0BC;--accent:#779B7C;--soft:#395244;--border:#4B5D50;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='creme']{--bg:#F9F3E9;--card:#FFFCF4;--ink:#47372A;--muted:#85745F;--accent:#9D7C56;--soft:#EDE0CA;--border:#E2D1B8;--good:#4D896B;--shadow:none;--danger:#D46C79}
+body[data-theme='cereja']{--bg:#301B28;--card:#442436;--ink:#FCECF2;--muted:#DBACBF;--accent:#BB4F71;--soft:#66394C;--border:#784B5E;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='lua']{--bg:#182131;--card:#25334A;--ink:#EDF2FB;--muted:#B7C5DB;--accent:#A2B3D2;--soft:#364763;--border:#445570;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='vermelho']{--bg:#2A1218;--card:#3E1C25;--ink:#FFF0F0;--muted:#E3B8BE;--accent:#D95C64;--soft:#622C38;--border:#703846;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+body[data-theme='marinho']{--bg:#0F2037;--card:#1B304B;--ink:#EDF5FF;--muted:#B5C9E0;--accent:#8BB6E4;--soft:#294665;--border:#365674;--good:#9ED4AC;--shadow:none;--danger:#D46C79}
+
+/* Theme card gallery with live color previews. */
+@media(min-width:680px){body:not(.fullview) .grid3:has(.theme-preview){grid-template-columns:repeat(4,minmax(0,1fr))}}
+.theme-preview{transition:transform .15s ease}.preview:hover .theme-preview{transform:translateY(-2px)}
+/* Desktop: genuinely wide home, mobile layout untouched. */
+@media(min-width:1100px){
+ body:not(.fullview) #app{width:calc(100% - 234px);max-width:none;margin:0 0 0 234px;padding:0 clamp(22px,3vw,60px) 100px}
+ body:not(.fullview) #app>main,body:not(.fullview) .top{max-width:1500px;width:100%;margin-left:auto;margin-right:auto}
+ body:not(.fullview) .top{position:sticky;top:0;z-index:12;background:var(--bg);border-bottom:1px solid var(--border);padding-top:16px;padding-bottom:14px}
+ body:not(.fullview) .top .brand{font-size:21px;opacity:1}
+ .el30-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,2vw,36px);align-items:start;padding-top:22px}
+ .el30-main-column{min-width:0}.el30-hero{background:linear-gradient(115deg,var(--card),var(--soft));border:1px solid var(--border);border-radius:24px;padding:clamp(24px,3vw,48px);margin-bottom:27px}
+ .el30-eyebrow{font:700 11px system-ui,sans-serif;letter-spacing:.16em;color:var(--accent)}
+ .el30-hero h1{font:700 clamp(31px,3.4vw,49px)/1.12 Georgia,serif;max-width:680px;letter-spacing:-.035em;margin:15px 0 10px}
+ .el30-hero p{font-size:15px;line-height:1.6;color:var(--muted);margin:0}.el30-quick{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+ .el30-section{margin:25px 0 34px}.el30-section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.el30-section-title h2,.el30-side-card h2{font:700 20px Georgia,serif;margin:0}.el30-text-link{background:none;border:0;color:var(--accent);font-size:13px;font-weight:700;white-space:nowrap}
+ .el30-recent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.el30-document{display:flex;align-items:flex-start;flex-wrap:wrap;gap:13px;background:var(--card);border:1px solid var(--border);border-radius:17px;padding:17px;min-width:0}.el30-file-icon{width:41px;height:45px;display:grid;place-items:center;background:var(--soft);color:var(--accent);border-radius:10px;font-size:23px}.el30-doc-info{min-width:0;flex:1;display:grid;gap:6px}.el30-doc-info strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}.el30-doc-info span{font-size:12px;color:var(--muted)}.el30-doc-buttons{display:flex;gap:6px;width:100%}
+ .el30-project-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.el30-project{background:transparent;border:0;display:grid;text-align:left;gap:7px;min-width:0;padding:0}.el30-project-cover{height:auto;aspect-ratio:3/4;border-radius:13px;background:linear-gradient(145deg,var(--el30-cover),var(--soft));display:grid;place-items:center;color:white;font-size:33px;box-shadow:0 10px 22px #00000013}.el30-project strong{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px}.el30-project>span{font-size:12px;color:var(--muted)}.el30-empty-project{background:var(--card);border:1px dashed var(--accent);border-radius:14px;min-height:165px;color:var(--accent);padding:20px}
+ .el30-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.el30-shortcuts button{background:var(--card);border:1px solid var(--border);border-radius:16px;min-height:112px;text-align:left;padding:16px;color:var(--accent);font-size:22px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.el30-shortcuts strong{font-size:13px;color:var(--ink)}.el30-shortcuts span{font-size:11px;color:var(--muted)}
+ .el30-aside{position:sticky;top:83px}.el30-side-card{padding:20px!important;margin:0 0 15px!important}.el30-side-card h2{font-size:18px}.el30-streak{margin:12px 0 0;color:var(--muted)}.el30-streak b{font:700 39px Georgia,serif;color:var(--accent)}.el30-aside .week{gap:3px}.el30-aside .dot{width:30px;height:30px;font-size:11px}.el30-progress-label{display:flex;align-items:center;justify-content:space-between;gap:7px;font-size:13px;margin:17px 0 12px}.el30-progress-label span{font-size:12px;color:var(--muted)}.el30-mini-stats{display:flex;justify-content:space-between;gap:5px;font-size:11px;color:var(--muted);margin:14px 0 18px}
+}
+@media(min-width:1100px) and (max-width:1380px){.el30-workspace{grid-template-columns:minmax(0,1fr) 255px}.el30-project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.el30-recent-grid{grid-template-columns:1fr}}
+/* Tablet and phone use the existing compact home, deliberately unchanged. */
