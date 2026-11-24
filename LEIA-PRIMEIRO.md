@@ -1,11 +1,12 @@
-# Entrelinhas 3.0.5 — Design integrado
+# Entrelinhas 3.0.6 — Correção da Home
 
-Atualização visual de Projetos, Diário e Home no desktop. Inclui nove ícones ilustrados originais dentro de `assets/categorias/`. O layout mobile mantém a navegação existente; filtros de Diário ficam compactos também no celular.
+Correção do texto literal `${el305Icon("todos")}` na Home, do cartão de projeto espremido e das dimensões dos cartões e atalhos. Ícones ilustrados permanecem em `assets/categorias`.
 
-## Publicação
-1. Faça backup dos seus textos pelo Entrelinhas antes de atualizar.
-2. Extraia este ZIP. Envie **o conteúdo da pasta**, incluindo `assets/categorias/`, para a raiz da branch `main` em `https://github.com/sfuria/Entrelinhas-/upload/main`. O GitHub deve mostrar a pasta `assets` junto a `index.html`.
-3. Os arquivos essenciais são `index.html`, `app-v305.js`, `styles-v305.css`, `sw.js`, `pwa-register.js`, `manifest.json`, `icon-192.png`, `icon-512.png` e a pasta `assets/categorias`.
-4. Espere o GitHub Pages publicar, abra `https://sfuria.github.io/Entrelinhas-/` e atualize a página. Não limpe o armazenamento do site.
+## Publicar
+1. Faça um backup externo dos seus dados no Entrelinhas.
+2. Extraia este ZIP; envie **todos os arquivos e pastas** para a raiz da branch `main` em https://github.com/sfuria/Entrelinhas-/upload/main
+3. Confirme que `index.html` aponta para `app-v306.js` e `styles-v306.css`, e que os arquivos e `assets/categorias/` existem.
+4. Espere a publicação; abra https://sfuria.github.io/Entrelinhas-/ e recarregue com Ctrl+Shift+R no computador.
+5. Não limpe os dados do navegador ou desinstale o aplicativo.
 
-Nenhum processo de migração ou exclusão de dados foi incluído. Integrações Google ainda precisam de configuração e testes.
+A integração Google continua exigindo configuração; não houve mudanças nos dados dos manuscritos.
