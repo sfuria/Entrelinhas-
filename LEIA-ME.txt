@@ -1,0 +1,1 @@
+Entrelinhas 1.3 — Vínculos narrativos: faça backup JSON; substitua index.html e sw.js na raiz do GitHub Pages. Ícones, identidade visual e menus principais preservados. Relações e descrições ficam nos dados locais e são incluídas no backup JSON. A sincronização Google para o Diário não está implementada.

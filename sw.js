@@ -1,5 +1,5 @@
-/* Entrelinhas PWA 0.8 — armazena apenas a interface, nunca manuscritos nem tokens do Google. */
-const CACHE = 'entrelinhas-app-shell-v08';
+/* Entrelinhas PWA 0.9 — armazena apenas a interface, nunca manuscritos nem tokens do Google. */
+const CACHE = 'entrelinhas-app-shell-v13';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 const ROOT = new URL('./', self.location.href);
 const KNOWN = new Set(ASSETS.map(path => new URL(path, ROOT).pathname));
