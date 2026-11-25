@@ -1,12 +1,10 @@
-# Entrelinhas 3.0.6 — Correção da Home
+# Entrelinhas 3.0.7 — UI coerente
 
-Correção do texto literal `${el305Icon("todos")}` na Home, do cartão de projeto espremido e das dimensões dos cartões e atalhos. Ícones ilustrados permanecem em `assets/categorias`.
+A atualização reorganiza a página de Leitura, o Diário e a apresentação das opções de Segurança, Backup e Instalação. Substitui a iconografia de emojis daquelas áreas por ícones SVG locais, preservando os nove ícones autorais de categorias.
 
-## Publicar
-1. Faça um backup externo dos seus dados no Entrelinhas.
-2. Extraia este ZIP; envie **todos os arquivos e pastas** para a raiz da branch `main` em https://github.com/sfuria/Entrelinhas-/upload/main
-3. Confirme que `index.html` aponta para `app-v306.js` e `styles-v306.css`, e que os arquivos e `assets/categorias/` existem.
-4. Espere a publicação; abra https://sfuria.github.io/Entrelinhas-/ e recarregue com Ctrl+Shift+R no computador.
-5. Não limpe os dados do navegador ou desinstale o aplicativo.
+1. Faça backup dos dados atuais antes de publicar.
+2. Extraia o ZIP e envie **os arquivos e a pasta assets** à raiz do repositório. Não envie somente o ZIP.
+3. Confirme que index.html, app-v307.js, styles-v307.css e sw.js estão na raiz.
+4. Após a publicação, recarregue o site sem limpar dados do navegador.
 
-A integração Google continua exigindo configuração; não houve mudanças nos dados dos manuscritos.
+A instalação e a integração Google continuam experimentais; não habilite permissões ou use dados sensíveis sem realizar testes próprios. Esta versão não altera o formato dos dados nem realiza migrações.
