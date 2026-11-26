@@ -1,10 +1,9 @@
-# Entrelinhas 3.1.1 — Correções funcionais
+# Entrelinhas 3.1.2 — projetos e edição de imagens
 
-Base visual: 3.0.9, anterior à 3.1.0. Sem troca dos ícones atuais nem dos temas.
+**Antes de publicar:** exporte um backup dos seus manuscritos. Não limpe os dados do navegador.
 
-- No desktop, Continuar escrevendo e Meus projetos aparecem lado a lado em monitores amplos; janelas menores reorganizam os blocos.
-- Clique numa imagem do editor para abrir o painel flutuante de edição. Ajuste largura, alinhamento do texto e posição. Modo atrás do texto é uma marca d’água translúcida experimental.
-- Clique no título de um documento ou nota para ler; Ctrl/Cmd+clique, botão central ou menu do navegador abre em outra aba. O comando Nova aba continua disponível.
-- Antes de publicar no GitHub, faça backup da biblioteca. Envie todos os arquivos e pastas do ZIP, não o ZIP fechado. Não limpe os dados do navegador.
-- Abertura em outra aba dos dados locais funciona na mesma origem e perfil de navegador; outros aparelhos exigem transferência/sincronização.
-- Imagens e links devem ser testados no computador e no Android com documentos fictícios antes de usar em manuscritos importantes.
+Envie o CONTEÚDO extraído desta pasta, com as subpastas, ao repositório GitHub Pages. Os nomes de arquivos `app-v312.js` e `styles-v312.css` não devem ser alterados.
+
+Mudanças: projetos recentes e capítulos lado a lado no PC; capas opcionais para projetos, com imagens reduzidas armazenadas localmente; links reais para projetos e seções; ferramentas de imagem no editor local e no Diário.
+
+As alterações são experimentais e precisam de validação no seu PC e Android. As novas abas do navegador usam a biblioteca local desse mesmo perfil; abas em navegadores/perfis diferentes não compartilham o conteúdo local. O editor não reproduz todas as funções de diagramação do Google Docs.
