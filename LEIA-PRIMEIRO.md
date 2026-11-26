@@ -1,18 +1,23 @@
-# Entrelinhas 3.1.6 — Acesso ao laboratório de edição profissional
+# Entrelinhas 4.1 — Edição segura (alfa incremental)
 
-**O Entrelinhas web permanece intacto.** Este pacote adiciona um atalho na área **Escrita** para um editor profissional experimental baseado no ONLYOFFICE.
+Esta é uma atualização incremental da versão 4.0, preservando o editor principal e a chave de armazenamento do laboratório. **Ainda não integra ProseMirror/Tiptap.**
 
-- O atalho só funciona no computador onde o laboratório local estiver iniciado em http://localhost:8787/.
-- O laboratório precisa ser instalado a partir do **ZIP separado** `Entrelinhas-Editor-Profissional-Laboratorio-PC.zip`.
-- O editor atual, manuscritos, Diário, projetos, temas, ícones e armazenamentos não são migrados automaticamente.
-- O serviço profissional edita somente cópias de DOCX escolhidas e importadas manualmente.
-- Nunca inclua dados reais do laboratório no repositório público.
-- O laboratório ainda não oferece sincronização nem coautoria com o Entrelinhas.
+## O que foi implementado
+- Botões **Desfazer** e **Refazer**, com histórico de até 80 estados em memória, agrupando digitação após 650 ms sem alterações.
+- Atalho Ctrl/Cmd+S para salvar o laboratório; Ctrl/Cmd+Z e Ctrl/Cmd+Y quando o foco está fora de campos editáveis (dentro de texto, o navegador mantém o próprio desfazer).
+- Cópia automática anterior à substituição do rascunho por importação, novo documento ou restauração do exemplo; opção para baixar a cópia em Arquivo.
+- Atualização da versão do cache offline.
 
-## Publicação da interface
+## Instalar no GitHub Pages
+1. Antes de atualizar, **exporte backups JSON** dos rascunhos e dos manuscritos na versão antiga.
+2. Extraia o ZIP e envie todos os arquivos e pastas, preservando a estrutura, para a raiz do repositório publicado.
+3. Recarregue a página. Em Escrita, abra o novo editor experimental.
+4. Teste primeiro com texto fictício.
 
-Faça um backup antes. Extraia **somente este ZIP da interface** e envie os arquivos/pastas à raiz do GitHub Pages. A pasta de laboratório com documentos e senhas **não deve ser publicada**. Não limpe os dados locais de navegador.
+## Atenção
+- O histórico de desfazer existe apenas na sessão aberta: ao fechar a aba, ele se perde.
+- A cópia automática anterior fica em localStorage, no mesmo navegador, sem criptografia e pode ser perdida ao apagar os dados do site; não substitui backup externo. Apenas a **última** substituição tem cópia automática.
+- Ainda sem paginação verdadeira, DOCX/PDF, tabelas e motor transacional profissional; HTML e JSON já existiam na versão 4.0.
+- Esta entrega passou por testes estáticos (verificação de sintaxe e arquivos), **não por testes completos de interação em navegadores reais/Android**.
 
-## Limites
-
-Isto não converte o editor HTML antigo numa réplica do Word ou Google Docs. É uma integração inicial com um serviço completo de documentos, porém separado e não pronto para produção.
+Consulte `PLANO-EDITOR-PROFISSIONAL.md` para o roteiro original.
