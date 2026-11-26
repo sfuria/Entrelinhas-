@@ -1,17 +1,18 @@
-# Entrelinhas 3.1.5 — Correções de documento e imagens
+# Entrelinhas 3.1.6 — Acesso ao laboratório de edição profissional
 
-Esta atualização preserva o armazenamento e os ícones existentes e entrega mudanças no editor HTML atual.
+**O Entrelinhas web permanece intacto.** Este pacote adiciona um atalho na área **Escrita** para um editor profissional experimental baseado no ONLYOFFICE.
 
-- Editor de notas: mais comandos para texto, títulos, listas, alinhamento e recuo.
-- Ferramentas de imagem consolidadas e inseridas junto ao documento, não sobre outros elementos da tela.
-- Imagens permanecem no fluxo do documento, com ajuste de largura, texto ao lado e movimento entre parágrafos.
-- Arrastar imagens no Diário e editor local não deve ser convertido em colagem de texto.
-- Campo de descrição acessível para imagens.
-- Imagem nova no Diário entra num parágrafo próprio.
-- Preservadas as fontes, ícones ilustrados, temas, leitura e configurações anteriores.
+- O atalho só funciona no computador onde o laboratório local estiver iniciado em http://localhost:8787/.
+- O laboratório precisa ser instalado a partir do **ZIP separado** `Entrelinhas-Editor-Profissional-Laboratorio-PC.zip`.
+- O editor atual, manuscritos, Diário, projetos, temas, ícones e armazenamentos não são migrados automaticamente.
+- O serviço profissional edita somente cópias de DOCX escolhidas e importadas manualmente.
+- Nunca inclua dados reais do laboratório no repositório público.
+- O laboratório ainda não oferece sincronização nem coautoria com o Entrelinhas.
 
-**Limite:** o motor ainda é HTML contenteditable com comandos document.execCommand (legados). Isso NÃO é equivalente à paginação, coautoria ou layout fiel de Word/Google Docs. Uma migração para um editor estruturado (ProseMirror/Tiptap ou equivalente) requer planejamento, testes de conversão e proteção contra perda de dados.
+## Publicação da interface
 
-**Segurança:** exporte backup antes de publicar. Não limpe os dados do navegador. Conexão Google continua sujeita à configuração e validação próprias.
+Faça um backup antes. Extraia **somente este ZIP da interface** e envie os arquivos/pastas à raiz do GitHub Pages. A pasta de laboratório com documentos e senhas **não deve ser publicada**. Não limpe os dados locais de navegador.
 
-Publicar: envie todos os arquivos e subpastas extraídos para a raiz do GitHub Pages. Não faça upload apenas deste ZIP.
+## Limites
+
+Isto não converte o editor HTML antigo numa réplica do Word ou Google Docs. É uma integração inicial com um serviço completo de documentos, porém separado e não pronto para produção.
