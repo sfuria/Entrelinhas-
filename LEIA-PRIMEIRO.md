@@ -1,16 +1,17 @@
-# Entrelinhas 3.1.4 — Editores, imagens e leitura
+# Entrelinhas 3.1.5 — Correções de documento e imagens
 
-Atualização experimental do app GitHub Pages, baseada na 3.1.3. Faça um backup antes de instalar. Extraia o ZIP e envie TODOS os arquivos/pastas para a raiz do repositório. Preserve `assets/interface`.
+Esta atualização preserva o armazenamento e os ícones existentes e entrega mudanças no editor HTML atual.
 
-## Correções
-- Imagens não usam mais posicionamento absoluto dentro do documento; fotos antigas são normalizadas ao carregar.
-- Editor do Diário e editor de capítulos compartilham seleção e ferramentas de imagem, incluindo tamanhos prontos, tamanho percentual, disposição de texto em fluxo e comandos para mover por parágrafo.
-- Leitura: famílias de fontes do editor ficam disponíveis no leitor; escolhas Google Fonts carregam via rede quando selecionadas.
-- Seleção de voz em português disponibilizada conforme o navegador/sistema; algumas vozes podem depender de serviços on-line do sistema.
-- Novos ícones de funções com identidades separadas; iconografia autoral existente mantida.
+- Editor de notas: mais comandos para texto, títulos, listas, alinhamento e recuo.
+- Ferramentas de imagem consolidadas e inseridas junto ao documento, não sobre outros elementos da tela.
+- Imagens permanecem no fluxo do documento, com ajuste de largura, texto ao lado e movimento entre parágrafos.
+- Arrastar imagens no Diário e editor local não deve ser convertido em colagem de texto.
+- Campo de descrição acessível para imagens.
+- Imagem nova no Diário entra num parágrafo próprio.
+- Preservadas as fontes, ícones ilustrados, temas, leitura e configurações anteriores.
 
-## Limites
-- O editor continua baseado em contenteditable. Ainda não é equivalente ao motor de paginação Word/Google Docs, e não oferece a mesma fidelidade DOCX.
-- Texto ao redor da imagem é CSS float e depende da estrutura dos parágrafos. Imagens atrás do texto foram desabilitadas para evitar invasão de outras seções.
-- Funcionalidades não foram testadas com login Google real. Use manuscritos de teste primeiro.
-- O app não apaga seus textos intencionalmente, mas uma migração pode falhar: salve backup externo.
+**Limite:** o motor ainda é HTML contenteditable com comandos document.execCommand (legados). Isso NÃO é equivalente à paginação, coautoria ou layout fiel de Word/Google Docs. Uma migração para um editor estruturado (ProseMirror/Tiptap ou equivalente) requer planejamento, testes de conversão e proteção contra perda de dados.
+
+**Segurança:** exporte backup antes de publicar. Não limpe os dados do navegador. Conexão Google continua sujeita à configuração e validação próprias.
+
+Publicar: envie todos os arquivos e subpastas extraídos para a raiz do GitHub Pages. Não faça upload apenas deste ZIP.
