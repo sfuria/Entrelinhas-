@@ -769,3 +769,6 @@ a.btn{display:inline-flex;align-items:center;justify-content:center;text-decorat
 
 /* Entrelinhas 4.5 — atalhos para documentos externos */
 .el45-linked .el45-title{display:block;margin:7px 0 6px;overflow-wrap:anywhere}.el45-linked .btn-group{justify-content:flex-end}.el45-tip .btn-group{margin-top:12px;flex-wrap:wrap}@media(max-width:600px){.el45-linked .row{align-items:flex-start;flex-wrap:wrap}.el45-linked .btn-group{width:100%;justify-content:flex-start}}
+
+/* Entrelinhas 4.6 — Escolha do editor externo */
+.el46-options{display:grid;gap:10px;margin:16px 0}.el46-option{display:flex;align-items:center;gap:13px;text-align:left;width:100%;padding:15px;border:1px solid var(--line, #d8cadd);border-radius:14px;background:var(--card, #fff);color:inherit;cursor:pointer;font:inherit}.el46-option:hover,.el46-option:focus-visible{outline:2px solid #9c73b8;outline-offset:1px}.el46-option span:nth-child(2){flex:1;min-width:0}.el46-option strong{display:block;font-size:15px}.el46-option small{display:block;font-size:12px;opacity:.78;line-height:1.45;margin-top:4px}.el46-logo{display:grid;place-items:center;flex:0 0 37px;width:37px;height:37px;border-radius:9px;color:#fff;font-weight:800}.el46-google{background:#4285f4}.el46-word{background:#185abd}

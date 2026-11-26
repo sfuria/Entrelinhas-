@@ -1,13 +1,10 @@
-# Publicar Entrelinhas 4.5 no GitHub Pages
+# Publicar Entrelinhas 4.7
 
-1. Faça backup da biblioteca no Entrelinhas e salve uma cópia local dos seus manuscritos.
-2. Descompacte o ZIP. Envie **o conteúdo** da pasta, não a pasta inteira nem o ZIP, para a raiz do repositório `sfuria/Entrelinhas-`.
-3. Abra https://github.com/sfuria/Entrelinhas- → Code → Add file → Upload files.
-4. Arraste **todos os arquivos e pastas** extraídos, preservando o caminho `assets/`. Substitua os arquivos de mesmo nome quando solicitado.
-5. Clique em Commit changes; acompanhe Actions/Pages.
-6. Abra https://sfuria.github.io/Entrelinhas-/ e atualize a página com Ctrl+Shift+R.
-7. Abra seu projeto → Vincular Word / Docs, cole o link original e escolha o projeto. Clique em Abrir e editar.
+1. Faça backup dos manuscritos e exporte um backup do Entrelinhas antes da atualização.
+2. Extraia o ZIP. Entre no GitHub: https://github.com/sfuria/Entrelinhas-
+3. Aba **Code → Add file → Upload files**. Envie todos os arquivos e pastas do pacote para a raiz do repositório. É importante incluir **google-public-config.js**.
+4. Clique **Commit changes**; acompanhe em **Actions**.
+5. Abra https://sfuria.github.io/Entrelinhas-/ e atualize a página (Ctrl+Shift+R).
+6. Em Ajustes → Google Docs e Drive, clique **Conectar com Google**; selecione conta autorizada em testes.
 
-Se o GitHub web não preservar subpastas no upload, use GitHub Desktop para copiar o conteúdo extraído para a pasta clonada e fazer commit/push.
-
-O Google Picker requer configuração do Google Cloud em Ajustes. A vinculação manual por link NÃO requer chave API.
+**Não inclua client secret no site.** As configurações `clientId`, `pickerKey` e `projectNumber` são identificadores públicos e devem permanecer restritos no Google Cloud. Se precisar trocar a chave do Picker, altere `google-public-config.js` e publique novamente.
