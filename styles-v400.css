@@ -766,3 +766,6 @@ a.btn{display:inline-flex;align-items:center;justify-content:center;text-decorat
 .note-toolbar button{min-width:35px;min-height:35px;}
 .note-edit-area.el-paper-page .el315-image-block{display:flow-root;min-height:12px;}
 @media(max-width:700px){#el312-image-toolbar{padding:9px!important;}#el312-image-toolbar .el312-image-actions{grid-template-columns:repeat(3,minmax(0,1fr));}.note-toolbar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;}.note-toolbar button{flex:0 0 auto;}}
+
+/* Entrelinhas 4.5 — atalhos para documentos externos */
+.el45-linked .el45-title{display:block;margin:7px 0 6px;overflow-wrap:anywhere}.el45-linked .btn-group{justify-content:flex-end}.el45-tip .btn-group{margin-top:12px;flex-wrap:wrap}@media(max-width:600px){.el45-linked .row{align-items:flex-start;flex-wrap:wrap}.el45-linked .btn-group{width:100%;justify-content:flex-start}}

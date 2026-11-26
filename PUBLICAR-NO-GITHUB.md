@@ -1,14 +1,13 @@
-# Publicar o Entrelinhas 4.3 no GitHub Pages
+# Publicar Entrelinhas 4.5 no GitHub Pages
 
-**Site:** https://sfuria.github.io/Entrelinhas-/
-**Repositório:** https://github.com/sfuria/Entrelinhas-
+1. Faça backup da biblioteca no Entrelinhas e salve uma cópia local dos seus manuscritos.
+2. Descompacte o ZIP. Envie **o conteúdo** da pasta, não a pasta inteira nem o ZIP, para a raiz do repositório `sfuria/Entrelinhas-`.
+3. Abra https://github.com/sfuria/Entrelinhas- → Code → Add file → Upload files.
+4. Arraste **todos os arquivos e pastas** extraídos, preservando o caminho `assets/`. Substitua os arquivos de mesmo nome quando solicitado.
+5. Clique em Commit changes; acompanhe Actions/Pages.
+6. Abra https://sfuria.github.io/Entrelinhas-/ e atualize a página com Ctrl+Shift+R.
+7. Abra seu projeto → Vincular Word / Docs, cole o link original e escolha o projeto. Clique em Abrir e editar.
 
-1. Antes de qualquer atualização, faça backup do conteúdo do repositório e exporte seus textos do Entrelinhas. O armazenamento local do navegador não equivale a um backup externo.
-2. Baixe e extraia **Entrelinhas-v430-Estrutura-e-Metas-Alfa.zip**.
-3. Entre em https://github.com/sfuria/Entrelinhas- e abra a aba **Code**.
-4. Clique em **Add file → Upload files**. Envie os arquivos e pastas **de dentro** do ZIP para a raiz do repositório, preservando a estrutura, sem criar uma pasta extra `Entrelinhas-v430`. Se o upload pelo navegador não preservar as pastas, faça a atualização por Git/GitHub Desktop.
-5. Confirme o commit; aguarde a publicação em **Actions** (ou em **Settings → Pages**).
-6. Abra https://sfuria.github.io/Entrelinhas-/ e vá a **Escrita → Experimentar novo editor integrado**. Teste primeiro com texto fictício.
-7. Se a versão anterior aparecer, recarregue a página e feche/reabra o aplicativo instalado para atualizar o cache offline. Não limpe os dados do site: isso pode apagar rascunhos locais.
+Se o GitHub web não preservar subpastas no upload, use GitHub Desktop para copiar o conteúdo extraído para a pasta clonada e fazer commit/push.
 
-**Atenção:** atualizações pelo navegador podem exigir substituir arquivos existentes; antes de confirmar, confira se index.html, sw.js, editor-next.html, editor-next.js e editor-next.css estão nos caminhos corretos.
+O Google Picker requer configuração do Google Cloud em Ajustes. A vinculação manual por link NÃO requer chave API.
