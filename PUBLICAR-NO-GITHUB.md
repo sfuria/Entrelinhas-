@@ -1,10 +1,14 @@
-# Publicar Entrelinhas 4.7
+# Entrelinhas 4.7.1 — Correção Google Picker
 
-1. Faça backup dos manuscritos e exporte um backup do Entrelinhas antes da atualização.
-2. Extraia o ZIP. Entre no GitHub: https://github.com/sfuria/Entrelinhas-
-3. Aba **Code → Add file → Upload files**. Envie todos os arquivos e pastas do pacote para a raiz do repositório. É importante incluir **google-public-config.js**.
-4. Clique **Commit changes**; acompanhe em **Actions**.
-5. Abra https://sfuria.github.io/Entrelinhas-/ e atualize a página (Ctrl+Shift+R).
-6. Em Ajustes → Google Docs e Drive, clique **Conectar com Google**; selecione conta autorizada em testes.
+Corrigida a capitalização de caracteres na chave pública do Google Picker em `google-public-config.js`, anteriormente transcrita incorretamente. O serviço Google diferencia letras maiúsculas e minúsculas. Cache atualizado para forçar nova instalação. Nenhum manuscrito foi removido ou migrado.
 
-**Não inclua client secret no site.** As configurações `clientId`, `pickerKey` e `projectNumber` são identificadores públicos e devem permanecer restritos no Google Cloud. Se precisar trocar a chave do Picker, altere `google-public-config.js` e publique novamente.
+## Instalação
+1. Faça backup do Entrelinhas e dos manuscritos.
+2. Extraia o ZIP; envie todos os arquivos e pastas para https://github.com/sfuria/Entrelinhas- preservando caminhos.
+3. Em GitHub Code > Add file > Upload files, confirme substituições e Commit changes.
+4. Aguarde a publicação no Actions e abra https://sfuria.github.io/Entrelinhas-/ ; atualize com Ctrl+Shift+R.
+5. Em Mesa de escrita, use Selecionar no Google Drive.
+
+Se ainda surgir erro de chave inválida, confirmar as restrições HTTP referer e que a Google Picker API está ativada.
+
+Esta correção não transforma o seletor em navegador universal de arquivos; essa ampliação está pendente.
