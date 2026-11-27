@@ -1,5 +1,5 @@
 /* Entrelinhas 3.0.7: rede primeiro para arquivos públicos de interface; cache apenas como fallback offline. */
-const CACHE = 'entrelinhas-app-shell-v480';
+const CACHE = 'entrelinhas-app-shell-v481';
 const ASSETS = ['./index.html','./manifest.json','./app-v400.js','./google-public-config.js','./pwa-register.js','./editor-next.html','./editor-next.css','./editor-next.js','./styles-v400.css','./icon-192.png','./icon-512.png','./assets/categorias/leitura.svg','./assets/categorias/todos.webp','./assets/categorias/ideia.webp','./assets/categorias/escaleta.webp','./assets/categorias/cena.webp','./assets/categorias/personagem.webp','./assets/categorias/mundo.webp','./assets/categorias/diario.webp','./assets/categorias/pesquisa.webp','./assets/categorias/cronologia.webp','./assets/decoracao/paisagem.svg','./assets/interface/projetos.webp','./assets/interface/ofensiva.webp','./assets/interface/meta.webp','./assets/interface/leitura.webp','./assets/interface/ia.webp','./assets/interface/aparencia.webp'];
 const ROOT = new URL('./',self.location.href);
 const KNOWN = new Set(ASSETS.map(p=>new URL(p,ROOT).pathname));

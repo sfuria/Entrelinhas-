@@ -1504,20 +1504,26 @@ async function elDocsPick(){
     const picked=Array.isArray(response.docs)?response.docs:[];
     let linked=0,errors=[];
     for(const file of picked){
-     const id=String(file?.id||'');
-     if(!elDocsValidId(id)){errors.push('Arquivo sem identificador válido');continue}
+     // Google Picker already returns file ID and name after the user chooses it.
+     // A second files.get request can return 404 under drive.file, even for a selected file.
+     // Linking only needs the Picker result; viewing/editing remains on Google Drive.
+     const id=String(file?.id||file?.[g.Document?.ID]||'').trim();
+     if(!elDocsValidId(id)){errors.push('Arquivo selecionado sem identificador válido');continue}
+     const rawName=String(file?.name||file?.[g.Document?.NAME]||file?.title||'Arquivo do Google Drive');
+     const name=rawName.trim().slice(0,140)||'Arquivo do Google Drive';
+     const mimeType=String(file?.mimeType||file?.[g.Document?.MIME_TYPE]||'');
+     const pickerUrl=String(file?.url||file?.[g.Document?.URL]||'');
      try{
-      const res=await googleApi('https://www.googleapis.com/drive/v3/files/'+encodeURIComponent(id)+'?fields=id,name,mimeType,webViewLink');
-      const metadata=await res.json();
-      if(metadata.mimeType==='application/vnd.google-apps.folder')continue;
-      if(metadata.mimeType==='application/vnd.google-apps.document'){
-       elDocsRegister(metadata.id,metadata.name,projectId||null);
+      if(mimeType==='application/vnd.google-apps.folder')continue;
+      const isGoogleDoc=mimeType==='application/vnd.google-apps.document'||/^https:\/\/docs\.google\.com\/document\/d\//.test(pickerUrl);
+      if(isGoogleDoc){
+       elDocsRegister(id,name,projectId||null);
       }else{
-       const duplicate=data.documents.find(d=>d.externalLink?.driveId===metadata.id);
+       const duplicate=data.documents.find(d=>d.externalLink?.driveId===id);
        if(!duplicate){
-        const fileUrl=el48DriveUrl(metadata);
-        const d=createDocument(String(metadata.name||'Arquivo do Drive').slice(0,140),projectId||null,'capitulo','');
-        d.externalLink={version:1,provider:'drive',url:fileUrl,driveId:metadata.id};
+        const fileUrl=el48DriveUrl({id,webViewLink:pickerUrl});
+        const d=createDocument(name,projectId||null,'capitulo','');
+        d.externalLink={version:1,provider:'drive',url:fileUrl,driveId:id};
         persist(false);
        }
       }
