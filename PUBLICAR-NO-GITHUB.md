@@ -1,8 +1,10 @@
-# Publicar correção 4.7.2
+# Como atualizar Entrelinhas 4.8.0 no GitHub Pages
 
-1. Faça backup dos manuscritos.
-2. Abra https://github.com/sfuria/Entrelinhas-
-3. Em Code, envie apenas `index.html`, `sw.js` e `CORRECAO-v472.md` da pasta extraída, substituindo os arquivos na raiz. Não apague os demais arquivos.
-4. Confirme em Commit changes e acompanhe Actions.
-5. Abra https://sfuria.github.io/Entrelinhas-/ e pressione Ctrl+Shift+R.
-6. Teste selecionar documento no Google Drive. Se persistir, não recrie credenciais: verificar o Console de rede com os valores confidenciais ocultados.
+1. Faça backup dos textos no Entrelinhas.
+2. Extraia o ZIP, preservando as pastas.
+3. Entre em https://github.com/sfuria/Entrelinhas- e use Code > Add file > Upload files, na raiz do repositório.
+4. Substitua os arquivos com mesmo nome; confirme Commit changes. NÃO remova os demais.
+5. Confira GitHub Actions e depois abra https://sfuria.github.io/Entrelinhas-/
+6. Atualize a página com Ctrl+Shift+R. Entre em Ajustes > Google Docs e Drive > Conectar com Google. Depois clique em Escolher arquivos do Google Drive.
+
+A versão web depende do OAuth Google e do Google Picker externos; teste a conexão com uma conta autorizada antes de depender dela para documentos importantes.
